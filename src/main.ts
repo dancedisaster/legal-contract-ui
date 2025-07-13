@@ -21,9 +21,10 @@ import App from './App.vue';
 
 const app = createApp(App)
 
+const savedLocale = localStorage.getItem('locale') || 'en';
 const i18n = createI18n({
   legacy: false,
-  locale: 'en',
+  locale: savedLocale,
   fallbackLocale: 'en',
   messages
 })
