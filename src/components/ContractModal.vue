@@ -1,4 +1,3 @@
-<!-- src/components/ContractModal.vue -->
 <template>
   <el-dialog
     v-model="isVisible"
@@ -39,12 +38,14 @@ import { ElMessage } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 
 import type { Contract } from '../types/Contract';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps<{
   contractToEdit?: Contract | null;
 }>();
 
 const emit = defineEmits(['onSave', 'onCancel']);
+const { t } = useI18n();
 
 
 
@@ -63,8 +64,8 @@ interface RuleForm {
 
 const ruleFormRef = ref<FormInstance>();
 const rules = reactive<FormRules<RuleForm>>({
-  legalEntityName: [{ required: true, message: 'Legal Entity Name is required', trigger: 'blur' }],
-  authorName: [{ required: true, message: 'Author Name is required', trigger: 'blur' }],
+  legalEntityName: [{ required: true, message: t('legal-enty-name-required'), trigger: 'blur' }],
+  authorName: [{ required: true, message: t('author-name-required'), trigger: 'blur' }],
   description: [{ required: false }]
 });
 
@@ -90,8 +91,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     if (valid) {
       if (ruleForm.id) {
 
-
-        console.log('MODAL ## Updating contract:', ruleForm);
+        // console.log('MODAL ## Updating contract:', ruleForm);
 
         // Edit
         await contractStore.updateContract({
@@ -120,8 +120,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       resetForm(formEl);
     } else {
       console.log('error submit!', fields);
-      ElMessage.error('Something went wrong. Please try again.');
-
+      // ElMessage.error('Something went wrong. Please try again.');
     }
   });
 }
