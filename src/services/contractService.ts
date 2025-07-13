@@ -1,4 +1,3 @@
-// import axios from 'axios'
 import service from '@/services/http';
 import type { Contract } from '@/types/Contract'
 import type { ContractUpdateDto } from '../types/ContractUpdateDto';

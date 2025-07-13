@@ -18,7 +18,7 @@
     </div>
 
 
-    <table class="min-w-full table-fixed text-sm border-collapse shadow-lg rounded overflow-hidden "
+    <table class="min-w-full table-fixed text-sm border-collapse shadow-xl rounded overflow-hidden"
       v-loading="isLoading">
 
       <thead class="text-left text-sm font-semibold text-gray-900 dark:text-white ">
@@ -90,11 +90,7 @@ const currentPage = computed({
 
 
 function formatDate(dateStr: string): string {
-
-  // const d = new Date(dateStr);
-  // const pad = (n: number) => n.toString().padStart(2, '0');
-  // return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
-  formatDateUtil(dateStr);
+  return formatDateUtil(dateStr);
 }
 
 const editContract = (contract: Contract) => {
