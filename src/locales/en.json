@@ -13,10 +13,9 @@
   "description": "Description",
   "actions": "Actions",
   "home": "Home",
-  "change light'": "Change to Light Mode",
+  "change-light": "Change to Light Mode",
   "change-dark": "Change to Dark Mode",
   "chang-lang": "Change Language",
-  "change light": "Change to Light",
   "change-lang": "Change language",
   "loading": "Loading",
   "title-contracts-list": "Contracts List",
@@ -24,5 +23,10 @@
   "cancel": "Cancel",
   "save": "Save",
   "newContract": "New Contract",
-  "editContract": "Edit Contract"
+  "editContract": "Edit Contract",
+  "legal-enty-name-required": "Legal Entity Name is required",
+  "author-name-required": "Author Name is required",
+  "confirm-delete": "Confirm Delete",
+  "delete-confirmation": "Are you sure you want to delete {legalEntityName}?",
+  "contract-deleted-successfully": "Contract deleted successfully"
 }

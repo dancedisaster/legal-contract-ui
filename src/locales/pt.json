@@ -12,7 +12,7 @@
   "author": "Autor",
   "description": "Descrição",
   "actions": "Ações",
-  "change-light'": "Mudar para o Modo Claro",
+  "change-light": "Mudar para o Modo Claro",
   "change-dark": "Mudar para o Modo Escuro",
   "change-lang": "Mudar Idioma",
   "loading": "Carregando",
@@ -22,5 +22,11 @@
   "addContract": "Adicionar Contrato",
   "home": "Início",
   "newContract": "Novo Contrato",
-  "editContract": "Editar contrato"
+  "editContract": "Editar contrato",
+  "author-name-required": "O nome do autor é necessário",
+  "legal-enty-name-required": "O nome da entidade legal é necessário",
+  "chang-lang": "Mudar a linguagem",
+  "confirm-delete": "Confirme excluir",
+  "contract-deleted-successfully": "Contrato excluído com sucesso",
+  "delete-confirmation": "Tem certeza de que deseja excluir {legalEntityName}?"
 }
