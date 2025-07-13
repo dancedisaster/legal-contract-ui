@@ -1,20 +1,20 @@
 <template>
-  <div class="text-center">
-    <el-tooltip :content="isDark ? t('change light') : t('change-dark')" placement="top">
-      <button class="icon-btn mx-2 !outline-none " @click="toggleDark()">
-        <IconCloudMoonBold v-if="isDark" class="icon-footer" />
-        <IconSunHorizonBold v-else class="icon-footer" />
-      </button>
-    </el-tooltip>
+  <footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-black">
+      <div class="text-center">
+        <el-tooltip :content="isDark ? t('change-light') : t('change-dark')" placement="top">
+          <button class="icon-btn mx-2 !outline-none " @click="toggleDark()">
+            <IconCloudMoonBold v-if="isDark" class="icon-footer" />
+            <IconSunHorizonBold v-else class="icon-footer" />
+          </button>
+        </el-tooltip>
 
-    <el-tooltip :content="t('change-lang')" placement="top">
-      <button class="icon-btn mx-2 !outline-none" @click="toggleLocales()"
-      >
-         <IconLanguage class="icon-footer"  />
-         
-      </button>
-    </el-tooltip>
-  </div>
+        <el-tooltip :content="t('change-lang')" placement="top">
+          <button class="icon-btn mx-2 !outline-none" @click="toggleLocales()">
+            <IconLanguage class="icon-footer" />
+          </button>
+        </el-tooltip>
+      </div> 
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -30,9 +30,9 @@ const { t, availableLocales, locale } = useI18n();
 const toggleLocales = () => {
   const locales = availableLocales;
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length];
+
+  localStorage.setItem('locale', locale.value);
 };
-
-
 
 </script>
 
