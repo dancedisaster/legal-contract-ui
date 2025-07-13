@@ -2,8 +2,10 @@ console.log('TESTING HTTP SERVICE');
 
 import axios from 'axios';
 
+const baseURL = import.meta.env.VITE_API_URL || 'https://localhost:7041/api';
+
 const http = axios.create({
-  baseURL: 'https://localhost:7041/api',
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json'
   },
