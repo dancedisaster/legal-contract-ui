@@ -52,3 +52,25 @@ To change the default language, update the locale in src/i18n/index.ts.
 ### State Management with Pinia
 
 Global state is managed via Pinia.
+Stores are located in src/stores/.
+You can use them in components with:
+
+const myStore = useMyStore()
+
+### Project Structure
+
+├── public/                 # Static assets
+├── src/
+│   ├── assets/            # Images and other assets
+│   ├── components/        # Reusable components
+│   ├── layouts/           # Layouts and wrappers
+│   ├── pages/             # Views and page-level components
+│   ├── router/            # Vue Router configuration
+│   ├── stores/            # Pinia state management
+│   ├── i18n/              # Translation files
+│   ├── services/          # Axios API clients
+│   ├── types/             # TypeScript interfaces and types
+│   ├── App.vue            # Root component
+│   └── main.ts            # Entry point
+├── tests/                 # Unit and component tests
+├── vite.config.ts         # Vite configuration
