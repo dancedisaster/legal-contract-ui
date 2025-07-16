@@ -1,7 +1,5 @@
 // tests/setup.ts
-import { vi } from 'vitest'
-
-import { beforeEach } from 'vitest'
+import { vi, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
 
 
